@@ -1,0 +1,10 @@
+#.htaccess
+RewriteEngine On
+RewriteBase /public/
+
+# If the request is for an actual file or directory, serve it as-is
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all requests to index.php, passing the URL as a query parameter
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
