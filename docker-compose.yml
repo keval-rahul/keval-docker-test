@@ -23,7 +23,7 @@ services:
       MYSQL_USER: keval
       MYSQL_PASSWORD: kevalpass
     ports:
-      - "3007:3306"
+      - "3008:3306"
     networks:
       - app-network
     volumes:
